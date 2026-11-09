@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <aside id="groups">
+    <div class="col-title">Группы</div>
+    <div id="grouplist"></div>
+    <button id="newgroup" class="btn ghost">＋ Новая группа</button>
+    <div class="settings">
+      <label class="chk">
+        <input type="checkbox" id="removeAfterOpen" checked>
+        <span>Удалять после открытия</span>
+      </label>
+    </div>
+  </aside>
+
+  <main>
+    <div id="addform">
+      <textarea id="urlbox" rows="2" placeholder="Вставьте ссылки (можно пачкой)&#10;https://… или www.…"></textarea>
+      <div class="formrow">
+        <select id="targetsel" title="Куда сохранить"></select>
+        <button id="addbtn" class="btn primary">Отложить</button>
+      </div>
+    </div>
+
+    <header id="listhead"></header>
+    <div id="links"></div>
+
+    <footer>
+      <span id="counter"></span>
+      <span class="spacer"></span>
+      <button id="exportbtn" class="btn tiny ghost" title="Экспорт выбранной группы в JSON">Экспорт</button>
+      <label class="btn tiny ghost" for="importfile" title="Импорт JSON">Импорт</label>
+      <input type="file" id="importfile" accept=".json,application/json" hidden>
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
